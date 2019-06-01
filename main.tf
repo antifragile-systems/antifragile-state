@@ -1,5 +1,6 @@
 provider "aws" {
   region = "${var.aws_region}"
+  version = "1.60"
 }
 
 resource "aws_s3_bucket" "antifragile-infrastructure" {
