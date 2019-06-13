@@ -1,3 +1,7 @@
+terraform {
+  required_version = ">= 0.12"
+}
+
 provider "aws" {
   region  = var.aws_region
   version = "2.14"
@@ -26,3 +30,4 @@ resource "aws_dynamodb_table" "antifragile-infrastructure" {
     type = "S"
   }
 }
+

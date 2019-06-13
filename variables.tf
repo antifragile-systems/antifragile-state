@@ -2,4 +2,6 @@ variable "name" {
   default = "antifragile-state"
 }
 
-variable "aws_region" {}
+variable "aws_region" {
+}
+
