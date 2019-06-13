@@ -1,6 +1,6 @@
 provider "aws" {
-  region = "${var.aws_region}"
-  version = "1.60"
+  region  = var.aws_region
+  version = "2.14"
 }
 
 resource "aws_s3_bucket" "antifragile-infrastructure" {
@@ -16,9 +16,9 @@ resource "aws_s3_bucket" "antifragile-infrastructure" {
 }
 
 resource "aws_dynamodb_table" "antifragile-infrastructure" {
-  name = "${var.name}"
-  hash_key = "LockID"
-  read_capacity = 20
+  name           = var.name
+  hash_key       = "LockID"
+  read_capacity  = 20
   write_capacity = 20
 
   attribute {
