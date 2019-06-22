@@ -29,5 +29,9 @@ resource "aws_dynamodb_table" "antifragile-infrastructure" {
     name = "LockID"
     type = "S"
   }
+
+  tags = {
+    IsAntifragile = true
+  }
 }
 
